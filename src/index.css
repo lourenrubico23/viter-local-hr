@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "poppinsRegular";
+  src: url(/font/Poppins-Regular.ttf) format("truetype");
+  font-display: fallback;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /*  reference color
+  primary: #9F1659  
+  secondary: #e33589  
+  accent: #F7E300 
+  dark: "#3a3b36",
+  lightWarning: "#fffde7",
+  warning: "#f09a02",
+  alert: "#3f0505",
+   */
+  :root {
+    --primary-color: 159 22 89;
+    --secondary-color: 227 53 137;
+    --accent-color: 247 227 0;
+    --lightWarning-color: 225 253 231;
+    --alert-color: 63 5 5;
+    --dark-color: 58 59 54;
+    --warning-color: 240 154 2;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+  body {
+    @apply leading-relaxed font-[poppinsRegular] text-xs min-h-full text-dark;
+  }
+  pre {
+    @apply font-[poppinsRegular];
+  }
+  nav {
+    @apply bg-primary;
+  }
+  table {
+    @apply border-collapse border-spacing-2 text-left w-full table-auto;
+  }
+  table tr:hover {
+    @apply bg-gray-100;
+  }
+  table tr {
+    @apply border-b border-solid border-gray-300;
+  }
+  table th {
+    @apply font-bold bg-gray-200 py-1 pr-3 capitalize;
+  }
+  table td {
+    @apply py-2 pr-3;
+  }
+  input,
+  select {
+    @apply border border-solid border-gray-300 p-2 rounded-lg w-full h-[40px] truncate bg-transparent outline-none;
+  }
+  textarea {
+    @apply block border border-solid border-gray-300 p-2 rounded-lg w-full min-h-28 resize-y bg-transparent outline-none;
+  }
+  label {
+    @apply text-xs text-primary transform -translate-y-6 -translate-x-1 absolute left-3 top-4 px-1  z-10 isolate capitalize;
+  }
+  label:after {
+    @apply content-[''] w-[97%] h-[2.5px] absolute left-px top-[7.2px] bg-white -z-10;
+  }
+  input:disabled,
+  select:disabled,
+  textarea:disabled,
+  :disabled {
+    @apply bg-gray-100 border-gray-200 cursor-not-allowed hover:bg-gray-100 hover:text-inherit hover:border-gray-200;
+  }
+  input::file-selector-button {
+    @apply mr-5 border-0 bg-primary disabled:bg-gray-200 rounded-md text-white cursor-pointer px-1 py-0;
+  }
+  input:focus,
+  select:focus,
+  textarea:focus {
+    @apply border border-solid border-primary outline-0;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply relative min-h-screen print:pt-0 pt-[4rem] ml-0 lg:ml-48 pr-6 pl-4;
+  }
+  .footer-wrapper {
+    @apply text-center bg-white pl-[176px] absolute bottom-0 right-0 w-full;
+  }
+  .footer-wrapper p {
+    @apply text-[10px];
+  }
+  .footer-wrapper span {
+    @apply text-primary;
+  }
+  .navigation {
+    @apply bg-primary w-[176px] fixed left-0 top-0 mt-[4rem] h-full z-50;
+  }
+  .nav {
+    @apply flex items-center gap-2;
+  }
+  .navigation-wrapper {
+    @apply bg-primary pt-4 relative;
+  }
+  .navigation-content {
+    @apply text-white cursor-pointer text-[14px];
+  }
+  .submenu {
+    @apply ml-12 my-2 text-[12px];
+  }
+  .submenu li {
+    @apply my-1;
+  }
+  .title {
+    @apply text-base py-2.5 ml-4;
+  }
+  .list-content {
+    @apply mx-0;
+  }
+  .list-button {
+    @apply border-b border-dark/40 py-3;
+  }
+  .list-button span {
+    @apply flex items-center gap-2 ml-2.5 text-xs font-bold;
+  }
+}
+
+@layer utilities {
+  .tooltip-action-table {
+    @apply relative p-1 bg-transparent leading-none;
+  }
+  .tooltip-action-table::after {
+    @apply content-[attr(data-tooltip)] capitalize absolute -translate-x-2/4 bottom-full -top-[24px] bg-dark/80 text-white p-1 rounded-sm h-fit leading-none z-20 whitespace-nowrap text-center opacity-0 text-[10px] pointer-events-none transition ease-linear scale-0 duration-75 left-1/2;
+  }
+  .toggle-menu{
+    @apply duration-200 translate-x-0 h-fit p-2 absolute -right-[40px] top-1 text-xl
+  }
+}
