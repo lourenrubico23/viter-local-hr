@@ -42,7 +42,7 @@ const Navigation = ({ menu, submenu }) => {
   return (
     <>
       <div className="navigation">
-        <div className="navigation-wrapper">
+        <div className={`navigation-wrapper overflow-hidden duration-200 ${store.isShow ? "w-[176px]" : "w-0"}`}>
           <div className="navigation-content">
             <nav>
               <ul>

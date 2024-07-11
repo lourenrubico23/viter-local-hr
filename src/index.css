@@ -102,13 +102,13 @@
     @apply text-primary;
   }
   .navigation {
-    @apply bg-primary w-[176px] fixed left-0 top-0 mt-[4rem] h-full z-50;
+    @apply w-[176px] fixed left-0 top-0 mt-[4rem] h-full z-50;
   }
   .nav {
     @apply flex items-center gap-2;
   }
   .navigation-wrapper {
-    @apply bg-primary pt-4 relative;
+    @apply bg-primary pt-4 ;
   }
   .navigation-content {
     @apply text-white cursor-pointer text-[14px];
