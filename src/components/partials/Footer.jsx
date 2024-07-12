@@ -1,12 +1,21 @@
 import React from "react";
+import { StoreContext } from "../../store/StoreContext";
 
 const Footer = () => {
+  const { store, dispatch } = React.useContext(StoreContext);
+
   return (
     <>
-      <div className="footer-wrapper">
-        <p>
+      <div
+        className={`footer-wrapper text-center bg-white lg:pl-[176px] absolute bottom-0 right-0 w-full ${
+          store.isShow ? "lg:pl-[176px] pl-0" : "!pl-0 transition-all"
+        }`}
+      >
+        <p className="text-[10px]">
           © 2024 All Rights Reserved |{" "}
-          <span>Powered by Frontline Business Solutions, Inc.</span>
+          <span className="text-primary">
+            Powered by Frontline Business Solutions, Inc.
+          </span>
         </p>
       </div>
     </>

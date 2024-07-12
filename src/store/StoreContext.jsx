@@ -1,10 +1,11 @@
 import React from "react";
 import { StoreReducer } from "./StoreReducer";
+const isMobileOrTablet = window.matchMedia("(max-width:1027px)").matches;
 
 const initVal = {
   error: false,
   success: false,
-  isShow: false,
+  isShow: isMobileOrTablet ? false : true,
   isSettingsOpen: false,
 };
 

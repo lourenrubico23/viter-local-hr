@@ -20,6 +20,7 @@ export const StoreReducer = (state, action) => {
         ...state,
         isSettingsOpen: action.payload,
       };
+
     default:
       return state;
   }
