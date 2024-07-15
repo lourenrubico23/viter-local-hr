@@ -9,7 +9,7 @@ const UserList = () => {
     <>
       <div className="list-content">
         <div className="list-button">
-          <Link to="user/system" className="flex items-center gap-2">
+          <Link to="/settings/users/system" className="flex items-center gap-2">
             <span>
               <FaDev className="text-lg" />
               System

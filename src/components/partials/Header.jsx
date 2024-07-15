@@ -38,7 +38,7 @@ const Header = () => {
               <div className="max-w-[150px] max-h-[40px]">
                 <a href="#">
                   {/* <img src="http://via.placeholder.com/160x64" alt="" /> */}
-                  <FBSLogoSm />
+                  <FBSLogo />
                 </a>
               </div>
 
@@ -52,7 +52,7 @@ const Header = () => {
               onClick={handleOpen}
               ref={ref}
             >
-              <div className="bg-primary p-1 rounded-full">
+              <div className="bg-primary p-1.5 rounded-full">
                 <span className="text-white p-1 rounded-full">LR</span>
               </div>
             </div>

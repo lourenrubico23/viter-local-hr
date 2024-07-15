@@ -15,7 +15,7 @@ const AccountInfo = () => {
           </ul>
         </div>
         <h2 className="border-b-2">PASSWORD</h2>
-        <div className="py-8 grid grid-cols-[215px_1fr] gap-y-7 items-center">
+        <div className="py-8 pl-4 grid grid-cols-[215px_1fr] gap-y-7 items-center">
           <h3>Current Password: </h3>
           <input type="text" placeholder="Current Password" />
           <h3>New Password:</h3>

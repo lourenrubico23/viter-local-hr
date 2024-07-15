@@ -69,102 +69,144 @@ const Navigation = ({ menu, submenu }) => {
               <ul>
                 <li
                   className={`${
-                    menu === "overview" && "bg-secondary text-white"
+                    menu === "overview"
+                      ? "bg-secondary text-white"
+                      : "hover:bg-secondary/40"
                   }`}
                 >
-                  <div className="nav">
-                    <BsFillGrid1X2Fill className="text-sm" />
-                    <span className="!ml-2.5">OVERVIEW</span>
-                  </div>
-                </li>
-
-                <li
-                  className={`${menu === "time" && "bg-secondary text-white"}`}
-                >
-                  <div className="nav">
-                    <MdTimer className="text-base" />
-                    <span>TIME</span>
-                  </div>
-                </li>
-
-                <li
-                  className={`${menu === "leave" && "bg-secondary text-white"}`}
-                >
-                  <div className="nav">
-                    <BsFillCalendarEventFill />
-                    <span className="!ml-3">LEAVE</span>
-                  </div>
+                  <Link to={`${devNavUrl}/overview`}>
+                    <div className="nav">
+                      <BsFillGrid1X2Fill className="text-sm" />
+                      <span className="!ml-2.5">OVERVIEW</span>
+                    </div>
+                  </Link>
                 </li>
 
                 <li
                   className={`${
-                    menu === "overtime" && "bg-secondary text-white"
+                    menu === "time"
+                      ? "bg-secondary text-white"
+                      : "hover:bg-secondary/40"
                   }`}
                 >
-                  <div className="nav">
-                    <MdWorkHistory className="text-sm" />
-                    <span className="!ml-3">OVERTIME</span>
-                  </div>
+                  <Link to={`${devNavUrl}/time`}>
+                    <div className="nav">
+                      <MdTimer className="text-base" />
+                      <span>TIME</span>
+                    </div>
+                  </Link>
                 </li>
 
                 <li
                   className={`${
-                    menu === "employees" && "bg-secondary text-white"
+                    menu === "leave"
+                      ? "bg-secondary text-white"
+                      : "hover:bg-secondary/40"
                   }`}
                 >
-                  <div className="nav">
-                    <HiUserGroup className="text-sm" />
-                    <span className="!ml-3">EMPLOYEES</span>
-                  </div>
+                  <Link to={`${devNavUrl}/leave`}>
+                    <div className="nav">
+                      <BsFillCalendarEventFill />
+                      <span className="!ml-3">LEAVE</span>
+                    </div>
+                  </Link>
                 </li>
 
                 <li
                   className={`${
-                    menu === "client" && "bg-secondary text-white"
+                    menu === "overtime"
+                      ? "bg-secondary text-white"
+                      : "hover:bg-secondary/40"
                   }`}
                 >
-                  <div className="nav">
-                    <FaBuildingUser className="text-sm" />
-                    <span className="!ml-3">CLIENT</span>
-                  </div>
+                  <Link>
+                    <div className="nav">
+                      <MdWorkHistory className="text-sm" />
+                      <span className="!ml-3">OVERTIME</span>
+                    </div>
+                  </Link>
                 </li>
 
                 <li
                   className={`${
-                    menu === "announcement" && "bg-secondary text-white"
+                    menu === "employees"
+                      ? "bg-secondary text-white"
+                      : "hover:bg-secondary/40"
                   }`}
                 >
-                  <div className="nav">
-                    <HiSpeakerphone className="text-sm" />
-                    <span className="!ml-3">ANNOUNCEMENT</span>
-                  </div>
+                  <Link>
+                    <div className="nav">
+                      <HiUserGroup className="text-sm" />
+                      <span className="!ml-3">EMPLOYEES</span>
+                    </div>
+                  </Link>
                 </li>
 
                 <li
                   className={`${
-                    menu === "calendar-rd-l" && "bg-secondary text-white"
+                    menu === "client"
+                      ? "bg-secondary text-white"
+                      : "hover:bg-secondary/40"
                   }`}
                 >
-                  <div className="nav">
-                    <FaCalendarDays className="text-sm" />
-                    <span className="!ml-3">CALENDAR RD & L</span>
-                  </div>
+                  <Link>
+                    <div className="nav">
+                      <FaBuildingUser className="text-sm" />
+                      <span className="!ml-3">CLIENT</span>
+                    </div>
+                  </Link>
                 </li>
 
                 <li
                   className={`${
-                    menu === "work-schedule" && "bg-secondary text-white"
+                    menu === "announcement"
+                      ? "bg-secondary text-white"
+                      : "hover:bg-secondary/40"
                   }`}
                 >
-                  <div className="nav">
-                    <FaBuildingUser className="text-sm" />
-                    <span className="!ml-3">WORK SCHEDULE</span>
-                  </div>
+                  <Link>
+                    <div className="nav">
+                      <HiSpeakerphone className="text-sm" />
+                      <span className="!ml-3">ANNOUNCEMENT</span>
+                    </div>
+                  </Link>
                 </li>
 
                 <li
-                  className={`pr-2.5 !pl-3.5 ${
-                    menu === "payroll" && "bg-secondary text-white"
+                  className={`${
+                    menu === "calendar-rd-l"
+                      ? "bg-secondary text-white"
+                      : "hover:bg-secondary/40"
+                  }`}
+                >
+                  <Link>
+                    <div className="nav">
+                      <FaCalendarDays className="text-sm" />
+                      <span className="!ml-3">CALENDAR RD & L</span>
+                    </div>
+                  </Link>
+                </li>
+
+                <li
+                  className={`${
+                    menu === "work-schedule"
+                      ? "bg-secondary text-white"
+                      : "hover:bg-secondary/40"
+                  }`}
+                >
+                  <Link>
+                    <div className="nav">
+                      <FaBuildingUser className="text-sm" />
+                      <span className="!ml-3">WORK SCHEDULE</span>
+                    </div>
+                  </Link>
+                </li>
+
+                <li
+                  className={`pr-2.5 pl-4 py-0.5 w-full ${
+                    menu === "payroll"
+                      ? "bg-secondary text-white"
+                      : "hover:bg-secondary/40"
                   }`}
                 >
                   <div className="nav">
@@ -175,8 +217,10 @@ const Navigation = ({ menu, submenu }) => {
                 </li>
 
                 <li
-                  className={`pr-2.5 ${
-                    menu === "settings" && "bg-secondary text-white"
+                  className={`pr-2.5 pl-4 py-0.5 w-full ${
+                    menu === "settings"
+                      ? "bg-secondary text-white"
+                      : "hover:bg-secondary/40"
                   }`}
                   onClick={handleSettingsOpen}
                 >
@@ -197,19 +241,24 @@ const Navigation = ({ menu, submenu }) => {
                       className={`hover:text-accent border-l-2 border-transparent ${
                         submenu === "users"
                           ? "!border-accent !text-accent"
-                          : "border-transparent text-white"
+                          : "hover:border-white text-white"
                       }`}
                     >
-                      <Link to={`${devNavUrl}/settings/users`}>User</Link>
+                      <Link className="!p-0" to={`${devNavUrl}/settings/users`}>
+                        User
+                      </Link>
                     </li>
                     <li
                       className={`hover:text-accent border-l-2 border-transparent ${
                         submenu === "overview"
                           ? "!border-accent !text-accent"
-                          : "hover:border-accent text-white"
+                          : "hover:border-white text-white"
                       }`}
                     >
-                      <Link to={`${devNavUrl}/settings/overview`}>
+                      <Link
+                        className="!p-0"
+                        to={`${devNavUrl}/settings/overview`}
+                      >
                         Overview
                       </Link>
                     </li>

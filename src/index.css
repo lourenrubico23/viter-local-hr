@@ -105,19 +105,22 @@
     @apply ml-2;
   }
   .navigation-wrapper {
-    @apply bg-primary pt-2 h-full;
+    @apply bg-primary pt-3 h-full;
   }
   .navigation-content {
     @apply text-white cursor-pointer text-[14px];
   }
   nav.navigation-list ul li {
-    @apply pl-4 py-1 flex items-center justify-between text-white hover:bg-secondary;
+    @apply flex items-center justify-between text-white my-1.5;
+  }
+  nav.navigation-list ul li a {
+    @apply px-4 py-0.5 w-full;
   }
   ul.submenu {
     @apply ml-12 my-1 text-[12px];
   }
   ul.submenu li {
-    @apply my-px !pl-2 !py-0;
+    @apply my-px !pl-2 !py-0 !text-white hover:!bg-transparent;
   }
   .title {
     @apply text-base py-2.5 ml-7;
@@ -173,6 +176,46 @@
   .loading-bar::after {
     @apply content-[''] absolute top-0 left-0 w-[180%] h-full  bg-gradient-to-r from-transparent via-[#eeeeee] to-transparent  animate-loading;
   }
+  button {
+    @apply flex text-xs items-center gap-2;
+  }
+  .search {
+    @apply flex items-center w-[25rem] relative my-3;
+  }
+  .search-icon {
+    @apply text-gray-400 text-[16px] absolute left-0 h-full rounded-tr-md rounded-br-md flex items-center px-1;
+  }
+  .search input {
+    @apply h-[37px] border-[1px] border-gray-300 text-xs pl-6;
+  }
+  .search input:focus {
+    @apply outline-none border-primary;
+  }
+  /* .site-table {
+    @apply shadow-md my-5 rounded-xl;
+  } */
+ 
+  /* .site-table thead tr th:first-child {
+    @apply w-[2rem] pl-1;
+  }
+  .site-table thead tr th:nth-child(2) {
+    @apply w-[6rem];
+  }
+  .site-table thead tr th:nth-child(3) {
+    @apply w-[20rem] p-0;
+  }
+  .site-table tbody tr td:first-child {
+    @apply w-[2rem] pl-1;
+  }
+  .site-table tbody tr td:nth-child(3) {
+    @apply p-0;
+  }
+  .site-table tbody tr td:last-child {
+    @apply justify-end;
+  }
+  .site-table thead tr th:last-child {
+    @apply flex justify-end;
+  } */
 }
 
 @layer utilities {
@@ -181,6 +224,9 @@
   }
   .tooltip-action-table::after {
     @apply content-[attr(data-tooltip)] capitalize absolute -translate-x-2/4 bottom-full -top-[24px] bg-dark/80 text-white p-1 rounded-sm h-fit leading-none z-20 whitespace-nowrap text-center opacity-0 text-[10px] pointer-events-none transition ease-linear scale-0 duration-75 left-1/2;
+  }
+  .tooltip-action-table:hover::after {
+    @apply scale-100 opacity-100;
   }
   .toggle-menu {
     @apply duration-200 cursor-pointer hover:bg-dark/5 left-0 h-fit p-3 absolute top-0.5 text-xl z-50 !bg-white;

@@ -1,25 +1,25 @@
+import Header from "@/components/partials/Header";
 import React from "react";
-import Header from "../../../partials/Header";
 import Navigation from "../Navigation";
-import AccountInfo from "./AccountInfo";
 import { StoreContext } from "@/store/StoreContext";
 import Footer from "@/components/partials/Footer";
 
-const Account = () => {
+const Time = () => {
   const { store, dispatch } = React.useContext(StoreContext);
+
   return (
     <>
       <Header />
       <div className={`wrapper ${store.isShow ? "lg:ml-48" : "ml-1"}`}>
-        <Navigation />
+        <Navigation menu="time" />
         <div className="title">
-          <h2>Account</h2>
+          <h2>Time</h2>
         </div>
-        <AccountInfo />
-        <Footer />
+        <span className="mt-5 block">We will be right back.</span>
       </div>
+      <Footer />
     </>
   );
 };
 
-export default Account;
+export default Time;

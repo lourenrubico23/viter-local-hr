@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <div
-        className={`footer-wrapper text-center bg-white lg:pl-[176px] absolute bottom-0 right-0 w-full ${
+        className={`footer-wrapper text-center bg-white lg:pl-[176px] absolute bottom-0 right-0 w-full transition-all ${
           store.isShow ? "lg:pl-[176px] pl-0" : "!pl-0 transition-all"
         }`}
       >
