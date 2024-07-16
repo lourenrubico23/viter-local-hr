@@ -1,4 +1,3 @@
-import useQueryData from "@/components/custom-hooks/useQueryData";
 import FetchingSpinner from "@/components/partials/FetchingSpinner";
 import NoData from "@/components/partials/NoData";
 import SearchBar from "@/components/partials/SearchBar";
@@ -6,16 +5,15 @@ import ServerError from "@/components/partials/ServerError";
 import Status from "@/components/partials/Status";
 import TableLoading from "@/components/partials/TableLoading";
 import TableSpinner from "@/components/partials/TableSpinner";
-import { setIsFetching } from "@/store/StoreAction";
-import { StoreContext } from "@/store/StoreContext";
 import React from "react";
 import { FaEdit, FaUserAltSlash } from "react-icons/fa";
 import { FaKey } from "react-icons/fa6";
 
-const SystemTable = () => {
+const FbsAdminTable = () => {
   return (
     <>
       <SearchBar />
+
       <div className="shadow-md rounded-md overflow-y-auto">
         {/* <FetchingSpinner /> */}
         <table>
@@ -30,7 +28,6 @@ const SystemTable = () => {
           </thead>
           <tbody className="relative">
             {/* <TableSpinner /> */}
-
             <tr className="text-center">
               <td colSpan="100%">
                 <TableLoading />
@@ -52,7 +49,7 @@ const SystemTable = () => {
             <tr>
               <td className="pl-2">1.</td>
               <td>
-                <Status text="Inactive" />
+                <Status text="Active" />
               </td>
               <td>Louren Rubico</td>
               <td>Lourenrubico@gmail.com</td>
@@ -84,4 +81,4 @@ const SystemTable = () => {
   );
 };
 
-export default SystemTable;
+export default FbsAdminTable;

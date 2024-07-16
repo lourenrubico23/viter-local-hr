@@ -3,17 +3,13 @@ import React from "react";
 import Navigation from "../../../Navigation";
 import BreadCrumbs from "@/components/partials/BreadCrumbs";
 import { FaPlus } from "react-icons/fa6";
-import SystemTable from "./SystemTable";
+import FbsAdminTable from "./FbsAdminTable";
+import ModalAddFbsAdmin from "./ModalAddFbsAdmin";
 import { StoreContext } from "@/store/StoreContext";
-import {
-  setIsAdd,
-  setIsItemEdit,
-  setIsSettingsOpen,
-} from "@/store/StoreAction";
-import ModalAddSystem from "./ModalAddSystem";
+import { setIsAdd, setIsItemEdit, setIsSettingsOpen } from "@/store/StoreAction";
 import Footer from "@/components/partials/Footer";
 
-const System = () => {
+const FbsAdmin = () => {
   const { store, dispatch } = React.useContext(StoreContext);
 
   const handleAdd = () => {
@@ -28,26 +24,23 @@ const System = () => {
     <>
       <Header />
       <div className={`wrapper ${store.isShow ? "lg:ml-48" : "ml-1"}`}>
-        <Navigation menu="settings" submenu="users" />
+        <Navigation menu="settings" submenu="admin" />
         <div className="py-3 ml-2 flex justify-between">
           <BreadCrumbs />
-          <button
-            className="flex items-center gap-1 text-primary"
-            onClick={handleAdd}
-          >
+          <button className="flex items-center gap-1 text-primary" onClick={handleAdd}>
             <FaPlus />
             Add
           </button>
         </div>
         <div className="text-base">
-          <h2>Users System</h2>
+          <h2>Users FBS Admin</h2>
         </div>
-        <SystemTable setIsItemEdit={setIsItemEdit} />
+        <FbsAdminTable setIsItemEdit={setIsItemEdit}/>
       </div>
-        <Footer/>
-      {store.isAdd && <ModalAddSystem setIsItemEdit={setIsItemEdit} />}
+      <Footer/>
+      {store.isAdd && <ModalAddFbsAdmin setIsItemEdit={setIsItemEdit}/>}
     </>
   );
 };
 
-export default System;
+export default FbsAdmin;

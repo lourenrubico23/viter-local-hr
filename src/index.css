@@ -173,9 +173,27 @@
   .modal.show > .animate-slideUp {
     @apply translate-y-0;
   }
-  .loading-bar::after {
-    @apply content-[''] absolute top-0 left-0 w-[180%] h-full  bg-gradient-to-r from-transparent via-[#eeeeee] to-transparent  animate-loading;
+  .modal-wrapper {
+    @apply bg-white h-full flex flex-col max-w-[400px] w-full p-5;
   }
+  .modal-title {
+    @apply flex justify-between items-center mb-5;
+  }
+  .modal-content{
+    @apply overflow-y-auto flex flex-col justify-between h-full
+  }
+  .modal-form{
+    @apply flex flex-col justify-between h-full
+  }
+  .input-wrapper{
+    @apply mb-2 my-[18px] relative flex flex-col gap-2
+  }
+  .form-btn{
+    @apply flex gap-2 pt-4
+  }
+  /* .loading-bar::after {
+    @apply content-[''] absolute top-0 left-0 w-[180%] h-full  bg-gradient-to-r from-transparent via-[#eeeeee] to-transparent  animate-loading;
+  } */
   button {
     @apply flex text-xs items-center gap-2;
   }
@@ -194,7 +212,7 @@
   /* .site-table {
     @apply shadow-md my-5 rounded-xl;
   } */
- 
+
   /* .site-table thead tr th:first-child {
     @apply w-[2rem] pl-1;
   }
@@ -220,7 +238,7 @@
 
 @layer utilities {
   .tooltip-action-table {
-    @apply relative p-1 bg-transparent leading-none;
+    @apply relative p-1 mr-1.5 bg-transparent leading-none;
   }
   .tooltip-action-table::after {
     @apply content-[attr(data-tooltip)] capitalize absolute -translate-x-2/4 bottom-full -top-[24px] bg-dark/80 text-white p-1 rounded-sm h-fit leading-none z-20 whitespace-nowrap text-center opacity-0 text-[10px] pointer-events-none transition ease-linear scale-0 duration-75 left-1/2;

@@ -18,7 +18,7 @@ const UserList = () => {
           </Link>
         </div>
         <div className="list-button">
-          <Link to="settings/users/admin" className="flex items-center gap-2">
+          <Link to="/settings/users/admin" className="flex items-center gap-2">
             <span>
               <FaUserTie className="text-lg" />
               FBS Admin
@@ -27,7 +27,7 @@ const UserList = () => {
           </Link>
         </div>
         <div className="list-button">
-          <Link to="settings/users/other" className="flex items-center gap-2">
+          <Link to="/settings/users/other" className="flex items-center gap-2">
             <span>
               <FaUserCog className="text-lg" />
               Other
@@ -36,7 +36,7 @@ const UserList = () => {
           </Link>
         </div>
         <div className="list-button">
-          <Link to="settings/users/role" className="flex items-center gap-2">
+          <Link to="/settings/users/role" className="flex items-center gap-2">
             <span>
               <RiUserSharedFill className="text-lg" />
               Role

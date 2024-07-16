@@ -1,4 +1,3 @@
-import useQueryData from "@/components/custom-hooks/useQueryData";
 import FetchingSpinner from "@/components/partials/FetchingSpinner";
 import NoData from "@/components/partials/NoData";
 import SearchBar from "@/components/partials/SearchBar";
@@ -6,13 +5,11 @@ import ServerError from "@/components/partials/ServerError";
 import Status from "@/components/partials/Status";
 import TableLoading from "@/components/partials/TableLoading";
 import TableSpinner from "@/components/partials/TableSpinner";
-import { setIsFetching } from "@/store/StoreAction";
-import { StoreContext } from "@/store/StoreContext";
 import React from "react";
-import { FaEdit, FaUserAltSlash } from "react-icons/fa";
+import { FaUserAltSlash } from "react-icons/fa";
 import { FaKey } from "react-icons/fa6";
 
-const SystemTable = () => {
+const OtherTable = () => {
   return (
     <>
       <SearchBar />
@@ -25,12 +22,13 @@ const SystemTable = () => {
               <th>Status</th>
               <th>Name</th>
               <th>Email</th>
+              <th>Role</th>
+              <th>Code</th>
               <th className="text-right">Actions</th>
             </tr>
           </thead>
           <tbody className="relative">
             {/* <TableSpinner /> */}
-
             <tr className="text-center">
               <td colSpan="100%">
                 <TableLoading />
@@ -52,14 +50,13 @@ const SystemTable = () => {
             <tr>
               <td className="pl-2">1.</td>
               <td>
-                <Status text="Inactive" />
+                <Status text="Active" />
               </td>
               <td>Louren Rubico</td>
-              <td>Lourenrubico@gmail.com</td>
+              <td>lourenrubico@gmail.com</td>
+              <td>Developer</td>
+              <td>0192121</td>
               <td className="flex items-center gap-3 justify-end">
-                <button className="tooltip-action-table" data-tooltip="Edit">
-                  <FaEdit className="text-gray-600" />
-                </button>
                 <button
                   className="tooltip-action-table"
                   data-tooltip="Inactivate"
@@ -84,4 +81,4 @@ const SystemTable = () => {
   );
 };
 
-export default SystemTable;
+export default OtherTable;

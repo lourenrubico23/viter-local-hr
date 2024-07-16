@@ -22,3 +22,27 @@ export const setIsSettingsOpen = (val) => {
     payload: val,
   };
 };
+export const setIsFetching = (val) => {
+  return {
+    type: "IS_FETCHING",
+    payload: val,
+  };
+};
+export const setIsLoading = (val) => {
+  return {
+    type: "IS_LOADING",
+    payload: val,
+  };
+};
+export const setIsAdd = (val) => {
+  return {
+    type: "IS_ADD",
+    payload: val,
+  };
+};
+export const setIsItemEdit = (val) => {
+  return {
+    type: "IS_ITEM_EDIT",
+    payload: val,
+  };
+};

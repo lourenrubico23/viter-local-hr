@@ -20,6 +20,26 @@ export const StoreReducer = (state, action) => {
         ...state,
         isSettingsOpen: action.payload,
       };
+    case "IS_FETCHING":
+      return {
+        ...state,
+        isFetching: action.payload,
+      };
+    case "IS_LOADING":
+      return {
+        ...state,
+        isLoading: action.payload,
+      };
+    case "IS_ADD":
+      return {
+        ...state,
+        isAdd: action.payload,
+      };
+    case "IS_ITEM_EDIT":
+      return {
+        ...state,
+        isItemEdit: action.payload,
+      };
 
     default:
       return state;

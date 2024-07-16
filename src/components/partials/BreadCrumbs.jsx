@@ -49,14 +49,12 @@ const BreadCrumbs = ({ param = "" }) => {
     });
   return (
     <>
-      <div className="flex items-center gap-5 breadcrumbs">
+      <div className="flex items-center gap-5 breadcrumbs pl-2.5">
         {crumbs.length === 1 ? (
           ""
         ) : (
           <button
             type="button"
-            className="tooltip-action-table !p-0"
-            data-tooltip="Back"
             onClick={() => handleBack()}
           >
             <FaArrowLeft className="w-4 h-4 lg:h-4 lg:w-4" />

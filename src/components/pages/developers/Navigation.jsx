@@ -203,7 +203,7 @@ const Navigation = ({ menu, submenu }) => {
                 </li>
 
                 <li
-                  className={`pr-2.5 pl-4 py-0.5 w-full ${
+                  className={`pr-3 pl-4 py-0.5 w-full ${
                     menu === "payroll"
                       ? "bg-secondary text-white"
                       : "hover:bg-secondary/40"
@@ -217,7 +217,7 @@ const Navigation = ({ menu, submenu }) => {
                 </li>
 
                 <li
-                  className={`pr-2.5 pl-4 py-0.5 w-full ${
+                  className={`pr-3 pl-4 py-0.5 w-full ${
                     menu === "settings"
                       ? "bg-secondary text-white"
                       : "hover:bg-secondary/40"

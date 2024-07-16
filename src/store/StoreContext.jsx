@@ -7,6 +7,10 @@ const initVal = {
   success: false,
   isShow: isMobileOrTablet ? false : true,
   isSettingsOpen: false,
+  isFetching: false,
+  isLoading: false,
+  isAdd: false, 
+  isItemEdit: null,
 };
 
 const StoreContext = React.createContext();
