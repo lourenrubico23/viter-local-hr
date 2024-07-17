@@ -1,4 +1,4 @@
-import Overview from "@/components/pages/developers/overview/Overview";
+import Overview from "@/components/pages/developers/settings/overview/SettingsOverview";
 import { devNavUrl } from "../components/helpers/function-general";
 import Account from "../components/pages/developers/account/Account";
 import User from "../components/pages/developers/settings/users/User";
@@ -33,6 +33,10 @@ export const routesDeveloper = [
   {
     path: `${devNavUrl}/${devNavUrl}/settings/users`,
     element: <User />,
+  },
+  {
+    path: `${devNavUrl}/${devNavUrl}/settings/overview`,
+    element: <Overview />,
   },
   {
     path: `${devNavUrl}/${devNavUrl}/settings/users/system`,

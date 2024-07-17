@@ -2,7 +2,6 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { routesDeveloper } from "./routes/RoutesDeveloper";
 import { StoreProvider } from "./store/StoreContext";
-import User from "./components/pages/developers/settings/users/User";
 
 function App() {
   const queryClient = new QueryClient();
